@@ -1,0 +1,3 @@
+<%= form_for @guest.room_assignments.temp_requests do |f| %>
+<%= f.select(:temperature, (48..90).to_a ) %>
+<% end %>
