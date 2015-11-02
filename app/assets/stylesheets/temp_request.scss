@@ -31,12 +31,11 @@
 
 /*Slider Styles*/
 .slider {
-  display: inline-block;
+  display: flex;
   width: 24em;
   height: 1em;
   position: relative;
   top: 13em;
-  align-self: center;
 }
 
 .ui-widget-content {
@@ -122,7 +121,8 @@
   border-radius: 100em;
   display: block;
   width: 2.6em;
-  padding: 0.6em 0;
+  height: 2.6em;
+  padding: 0.1em 0;
   font-size: 8em;
   text-align: center;
   margin: 0 auto;
