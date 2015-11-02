@@ -1,4 +1,4 @@
-class RoomAssignment < ApplicationController
+class RoomAssignmentsController < ApplicationController
 
   def index
     @unassigned = RoomAssignment.all.where("room_id is null")
@@ -9,6 +9,11 @@ class RoomAssignment < ApplicationController
     @room_assignment = RoomAssignment.new
   end
 
-
+  def update
+    @room_assignment = RoomAssignment.find(params[:id])
+    byebug
+    @room_assignment.update(room_id: params[:room_assignment][:room_id])
+    redirect_to room_assignments_url
+  end
 
 end

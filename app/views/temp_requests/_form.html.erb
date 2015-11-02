@@ -1,3 +1,7 @@
-<%= form_for @guest.room_assignments.temp_requests do |f| %>
-<%= f.select(:temperature, (48..90).to_a ) %>
+<%= form_for([@room_assignment, TempRequest.new]) do |f| %>
+<%= f.text_field(:temperature, class: "circle") %>
+<div id="slider" class="slider col-md-offset-1"></div>
+<div class="submit">
+<%= f.submit('Set Temperature', class: 'submit-button') %>
+</div>
 <% end %>

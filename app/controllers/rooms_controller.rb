@@ -1,4 +1,4 @@
-class Room < ApplicationController
+class RoomsController < ApplicationController
   def show
   end
 end

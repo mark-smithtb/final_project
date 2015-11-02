@@ -2,6 +2,7 @@ class GuestsController < ApplicationController
 
   def show
     @guest = Guest.find(params[:id])
+    @room_assignment = @guest.room_assignments.first
   end
 
   def new

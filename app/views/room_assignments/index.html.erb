@@ -1,0 +1,32 @@
+<div class="container room_assignments">
+  <div class="col-md-12">
+    <h1>Unassigned Guests</h1>
+    <% options = options_from_collection_for_select(Room.all.order("room_number"), :id, :room_number) %>
+    <% @unassigned.each do |assignment| %>
+    <div class = 'row assignment'>
+      <span class='col-md-6'>
+      Name: <%= assignment.guest.name %>
+      Reservation: <%= assignment.guest.reservation_number %>
+      Phone: <%= assignment.guest.phone_number %>
+    </span>
+      <%= form_for assignment do |f| %>
+        <%= f.select :room_id, options, class: 'add_room' %>
+        <%= f.submit %>
+
+      <% end %>
+    </div>
+    <% end %>
+
+    <h1>Assigned Guests </h1>
+    <% @assigned.each do |assignment| %>
+    <div class = 'row'>
+      <span class='col-md-6'>
+      Name: <%= assignment.guest.name %>
+      Reservation: <%= assignment.guest.reservation_number %>
+      Phone: <%= assignment.guest.phone_number %>
+      Room Number: <%= assignment.room.room_number %>
+    </span>
+    </div>
+    <% end %>
+  </div>
+</div>
