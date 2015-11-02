@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require jquery.ui.touch-punch.min
+//= require jquery.ui.touch-punch
+//= require jquery.ui.widget
+//= require jquery.ui.mouse
 //= require_tree .
