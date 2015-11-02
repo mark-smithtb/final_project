@@ -7,7 +7,6 @@ $(function() {
     slide: function( event, ui ) {
       $( ".circle" ).val( ui.value );
       var x = parseInt($( ".circle" ).val());
-      console.log("ui is ", ui, " and x is ", x);
       if (x <= 60) {
         $(".circle").css("background", "radial-gradient(circle at 100px 100px, rgb(77, 166, 207), rgb(-40, 80, 107))");
       }
