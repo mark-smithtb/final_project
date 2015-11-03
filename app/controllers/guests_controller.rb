@@ -3,6 +3,10 @@ class GuestsController < ApplicationController
   def show
     @guest = Guest.find(params[:id])
     @room_assignment = @guest.room_assignments.first
+    nest = NestThermostat::Nest.new(email: ENV['NEST_EMAIL'], password: ENV['NEST_PASS'])
+    @current_temp = nest.current_temp.to_i
+    @target_temp = nest.temp.to_i
+
   end
 
   def new
