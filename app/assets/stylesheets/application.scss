@@ -15,6 +15,11 @@
  *= require_self
  */
 
-body {
+.application-body {
   background-image: image-url('dark-wood.jpg')
+}
+
+.conciair {
+  position: relative;
+  bottom: 1em;
 }

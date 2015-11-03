@@ -2,31 +2,44 @@
   <div class="col-md-12">
     <h1>Unassigned Guests</h1>
     <% options = options_from_collection_for_select(Room.all.order("room_number"), :id, :room_number) %>
-    <% @unassigned.each do |assignment| %>
-    <div class = 'row assignment'>
-      <span class='col-md-6'>
-      Name: <%= assignment.guest.name %>
-      Reservation: <%= assignment.guest.reservation_number %>
-      Phone: <%= assignment.guest.phone_number %>
-    </span>
-      <%= form_for assignment do |f| %>
-        <%= f.select :room_id, options, class: 'add_room' %>
-        <%= f.submit %>
-
-      <% end %>
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Reservation</th>
+        <th>Phone</th>
+        <th>Room</th>
+      </tr>
+      <% @unassigned.each do |assignment| %>
+      <tr class="assignment">
+        <td><%= assignment.guest.name %></td>
+        <td><%= assignment.guest.reservation_number %></td>
+        <td><%= assignment.guest.phone_number %></td>
+        <td>
+          <%= form_for assignment do |f| %>
+          <%= f.select :room_id, options, class: 'add_room' %>
+          <%= f.submit %>
+        </td>
+        <% end %>
+      </tr>
     </div>
     <% end %>
-
-    <h1>Assigned Guests </h1>
+  </table>
+  <h1>Assigned Guests
+  </h1>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Reservation</th>
+      <th>Phone</th>
+      <th>Room</th>
+    </tr>
     <% @assigned.each do |assignment| %>
-    <div class = 'row'>
-      <span class='col-md-6'>
-      Name: <%= assignment.guest.name %>
-      Reservation: <%= assignment.guest.reservation_number %>
-      Phone: <%= assignment.guest.phone_number %>
-      Room Number: <%= assignment.room.room_number %>
-    </span>
-    </div>
+    <tr class="assignment">
+      <td><%= assignment.guest.name %></td>
+      <td><%= assignment.guest.reservation_number %></td>
+      <td><%= assignment.guest.phone_number %></td>
+      <td><%= assignment.room.room_number %></td>
+    </tr>
     <% end %>
   </div>
 </div>

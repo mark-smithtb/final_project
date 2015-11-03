@@ -1,4 +1,5 @@
 class RoomAssignmentsController < ApplicationController
+  layout "management"
 
   def index
     @unassigned = RoomAssignment.all.where("room_id is null")
