@@ -5,11 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-guest = Guest.create(name: 'Gavin', phone_number: "727-389-4944", reservation_number: "123")
-room_assignment = guest.room_assignments.create
-room = Room.create(room_number: 1)
-room_assignment.update(room_id: room.id)
+# guest = Guest.create(name: 'Gavin', phone_number: "727-389-4944", reservation_number: "123")
+# room_assignment = guest.room_assignments.create
+# room = Room.create(room_number: 1)
+# room_assignment.update(room_id: room.id)
 
+guest = Guest.create(name: 'Michael', phone_number: "727-389-4944", reservation_number: "1215")
+room_assignment = guest.room_assignments.create
 
 # def room_create
 #   room_number = 2
@@ -28,9 +30,3 @@ room_assignment.update(room_id: room.id)
 # if Guest.count < 40
 #   40.times.map {guest_create}
 # end
-group = Group.create(group_params)
-
-
-group_array = (2..4).to_a
-user = User.create(user_params)
-user.memberships.create(group_id: group_array.sample)
