@@ -1,7 +1,7 @@
 <div class="container room_assignments">
   <div class="col-md-12">
     <h1>Unassigned Guests</h1>
-    <% options = options_from_collection_for_select(Room.all.order("room_number"), :id, :room_number) %>
+    <% options = options_from_collection_for_select(Room.all.where("available is true").order("room_number"), :id, :room_number) %>
     <table class="table">
       <tr>
         <th>Name</th>
