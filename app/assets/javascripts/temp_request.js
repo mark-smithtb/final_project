@@ -35,3 +35,21 @@ $(function() {
   });
   $( ".circle" ).val( $( "#slider" ).slider( "value"));
 });
+
+$(document).ready(function()
+{
+  $('#temp_request_submit').submit(function(e)
+  {
+    e.preventDefault()
+    var temperature = $('.circle');
+    var room_assignment_id = $(this).data
+
+    $.ajax('/temp_requests/create', {
+      method: 'POST',
+      data : {
+        temperature: temperature,
+        room_assignment_id: room_assignment_id
+      }
+    });
+  });
+});
