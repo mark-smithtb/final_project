@@ -14,10 +14,7 @@ class RoomAssignmentsController < ApplicationController
     @room_assignment = RoomAssignment.find(params[:id])
     @room = Room.find(params[:room_assignment][:room_id])
     @room_assignment.update(room_id: params[:room_assignment][:room_id])
-    byebug
     @room.update(available: false)
-
-
     redirect_to room_assignments_url
   end
 
