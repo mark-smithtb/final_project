@@ -44,6 +44,9 @@ gem 'factory_girl_rails'
 #control nest thermostat
 gem 'nest_thermostat'
 
+#sidekiq for background
+gem 'sidekiq'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
