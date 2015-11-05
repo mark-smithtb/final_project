@@ -28,3 +28,9 @@ room_assignment.update(room_id: room.id)
 # if Guest.count < 40
 #   40.times.map {guest_create}
 # end
+group = Group.create(group_params)
+
+
+group_array = (2..4).to_a
+user = User.create(user_params)
+user.memberships.create(group_id: group_array.sample)

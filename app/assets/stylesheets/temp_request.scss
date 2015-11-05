@@ -7,16 +7,19 @@
 
 .temps {
   position: relative;
-  top: 3em;
-  font-size: 25px;
+  top: 3.5em;
+  font-size: 18px;
   display: inline;
   color: white;
-
+  content-align: center;
+  #current_temp {
+    padding-right: 2em;
+  }
 }
 
 .submit {
   position: relative;
-  top: 20em;
+  top: 13em;
   text-align: center;
 }
 
@@ -44,7 +47,7 @@
   width: 24em;
   height: 1em;
   position: relative;
-  top: 13em;
+  top: 9em;
 }
 
 .ui-widget-content {
@@ -151,5 +154,5 @@
 .circle {
   background: radial-gradient(circle at 100px 100px, rgb(177, 207, 161), rgb(60, 119, 61));
   position: relative;
-  top: 1.5em;
+  top: .9em;
 }
