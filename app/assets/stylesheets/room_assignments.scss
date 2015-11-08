@@ -15,3 +15,50 @@
 .assignment {
   padding-bottom: 2em;
 }
+
+.unassigned{
+  position: relative;
+  top: 5em;
+}
+
+#unassigned-heading {
+  font-family: 'Noto Serif', serif;
+  background-image: image-url('dark-wood.jpg');
+  color: white;
+}
+
+.unassigned-body {
+ position: relative;
+ bottom: 1.1em;
+
+ th {
+   border: 0;
+ }
+}
+
+.assigned {
+  position: relative;
+  top: 6em;
+}
+
+.assigned-body {
+  position: relative;
+  bottom: 1.1em;
+}
+
+
+#assigned-heading {
+  font-family: 'Noto Serif', serif;
+  background-image: image-url('dark-wood.jpg');
+  color: white;
+}
+
+.update-room {
+  font-family: 'Noto San', sans-serif;
+  border-radius: .1px;
+  color: #ffffff;
+  background: #222;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+}

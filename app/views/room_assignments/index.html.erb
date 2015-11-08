@@ -1,45 +1,52 @@
 <div class="container room_assignments">
   <div class="col-md-12">
-    <h1>Unassigned Guests</h1>
-    <% options = options_from_collection_for_select(Room.all.where("available is true").order("room_number"), :id, :room_number) %>
-    <table class="table">
-      <tr>
-        <th>Name</th>
-        <th>Reservation</th>
-        <th>Phone</th>
-        <th>Room</th>
-      </tr>
-      <% @unassigned.each do |assignment| %>
-      <tr class="assignment">
-        <td><%= assignment.guest.name %></td>
-        <td><%= assignment.guest.reservation_number %></td>
-        <td><%= assignment.guest.phone_number %></td>
-        <td>
-          <%= form_for assignment do |f| %>
-          <%= f.select :room_id, options, class: 'add_room' %>
-          <%= f.submit %>
-        </td>
-        <% end %>
-      </tr>
+    <div class="panel panel-default unassigned">
+      <div class="panel-heading" id="unassigned-heading">Unassigned Guests</div>
+      <% options = options_from_collection_for_select(Room.all.where("available is true").order(:room_number), :id, :room_number) %>
+      <div class="panel-body unassigned-body">
+        <table class="table">
+          <tr id="unassigned-table-header">
+            <th>Name</th>
+            <th>Reservation</th>
+            <th>Phone</th>
+            <th>Room</th>
+          </tr>
+          <% @unassigned.each do |assignment| %>
+          <tr class="assignment">
+            <td><%= assignment.guest.name %></td>
+            <td><%= assignment.guest.reservation_number %></td>
+            <td><%= assignment.guest.phone_number %></td>
+            <td>
+              <%= form_for assignment do |f| %>
+              <%= f.select :room_id, options, class: 'add_room' %>
+              <%= f.submit(class: "update-room") %>
+            </td>
+            <% end %>
+          </tr>
+          <% end %>
+        </table>
+      </div>
     </div>
-    <% end %>
-  </table>
-  <h1>Assigned Guests
-  </h1>
-  <table class="table">
-    <tr>
-      <th>Name</th>
-      <th>Reservation</th>
-      <th>Phone</th>
-      <th>Room</th>
-    </tr>
-    <% @assigned.each do |assignment| %>
-    <tr class="assignment">
-      <td><%= assignment.guest.name %></td>
-      <td><%= assignment.guest.reservation_number %></td>
-      <td><%= assignment.guest.phone_number %></td>
-      <td><%= assignment.room.room_number %></td>
-    </tr>
-    <% end %>
+  <div class="panel panel-default assigned">
+    <div class="panel-heading" id="assigned-heading">Assigned Guests</div>
+    <div class="panel-body assigned-body">
+      <table class="table">
+        <tr>
+          <th>Name</th>
+          <th>Reservation</th>
+          <th>Phone</th>
+          <th>Room</th>
+        </tr>
+        <% @assigned.each do |assignment| %>
+        <tr class="assignment">
+          <td><%= assignment.guest.name %></td>
+          <td><%= assignment.guest.reservation_number %></td>
+          <td><%= assignment.guest.phone_number %></td>
+          <td><%= assignment.room.room_number %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
   </div>
 </div>

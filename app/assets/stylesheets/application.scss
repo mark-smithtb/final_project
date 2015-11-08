@@ -14,7 +14,9 @@
  *= require_tree .
  *= require_self
  */
-
+table {
+  font-family: 'Noto Sans', sans-serif;
+}
 .application-body {
   background-image: image-url('dark-wood.jpg')
 }

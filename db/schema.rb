@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105181047) do
+ActiveRecord::Schema.define(version: 20151106214945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20151105181047) do
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.string  "room_number"
+    t.integer "room_number"
     t.string  "nest_device"
     t.string  "number_of_beds"
     t.boolean "available",      default: true
