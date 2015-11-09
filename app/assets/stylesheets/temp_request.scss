@@ -3,23 +3,16 @@
   text-shadow: 0px 1px 1px white;
   color: #f5f5f5;
   text-align: center;
-  position: relative;
-  top: 4em;
+  margin-top: 4em;
 }
 
 .temps {
   font-family: 'Noto Sans', sans-serif;
   text-shadow: 0px 1px 1px white;
   color: #f5f5f5;
-  position: relative;
-  top: 3.5em;
   font-size: 18px;
-  display: inline;
-  color: white;
-  content-align: center;
-  #current_temp {
-    padding-right: 2em;
-  }
+  text-align: center;
+  width: 50%;
 }
 
 .submit {
@@ -119,7 +112,7 @@
   background: -o-linear-gradient(top, rgba(64,69,77,1) 0%,rgba(86,89,97,1) 100%);
   background: -ms-linear-gradient(top, rgba(64,69,77,1) 0%,rgba(86,89,97,1) 100%);
   background: linear-gradient(to bottom, rgba(64,69,77,1) 0%,rgba(86,89,97,1) 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#40454d', endColorstr='#565961',GradientType=0 );
+  // filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#40454d', endColorstr='#565961',GradientType=0 );
 }
 
  :focus {
@@ -128,10 +121,7 @@
 /*End Slider Styles*/
 /*
 */
-.temps {
-  text-align: center;
-  width: 74.5%;
-}
+
 
 .circle {
   border-radius: 100em;
@@ -152,11 +142,11 @@
   background: -o-linear-gradient(top, rgba(77,80,87,1) 0%,rgba(66,71,79,1) 100%);
   background: -ms-linear-gradient(top, rgba(77,80,87,1) 0%,rgba(66,71,79,1) 100%);
   background: linear-gradient(to bottom, rgba(77,80,87,1) 0%,rgba(66,71,79,1) 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d5057', endColorstr='#42474f',GradientType=0 );
+  // filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d5057', endColorstr='#42474f',GradientType=0 );
 }
 
 .circle {
   background: radial-gradient(circle at 100px 100px, rgb(177, 207, 161), rgb(60, 119, 61));
   position: relative;
-  top: .9em;
+  top: .5em;
 }
