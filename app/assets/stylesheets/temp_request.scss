@@ -1,18 +1,18 @@
 .greating {
-    font-family: 'Noto Serif', serif;
-    text-shadow: 0px 1px 1px white;
-    color: #f5f5f5;
-    text-align: center;
-    margin-top: 4em;
+  font-family: 'Noto Serif', serif;
+  text-shadow: 0 1px 1px white;
+  color: #f5f5f5;
+  text-align: center;
+  margin-top: 4em;
 }
 
 .temps {
-    font-family: 'Noto Sans', sans-serif;
-    text-shadow: 0px 1px 1px white;
-    color: #f5f5f5;
-    font-size: 18px;
-    text-align: center;
-    width: 50%;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: 0 1px 1px white;
+  color: #f5f5f5;
+  font-size: 18px;
+  text-align: center;
+  width: 50%;
 }
 
 .submit {
@@ -121,8 +121,6 @@
 /*End Slider Styles*/
 /*
 */
-
-
 .circle {
   border-radius: 100em;
   display: block;
@@ -148,5 +146,5 @@
 .circle {
   background: radial-gradient(circle at 100px 100px, rgb(177, 207, 161), rgb(60, 119, 61));
   position: relative;
-  top: .9em;
+  top: 0.9em;
 }

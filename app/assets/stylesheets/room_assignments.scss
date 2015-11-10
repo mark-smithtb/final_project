@@ -7,7 +7,7 @@
 .room_assignments {
   padding-top: 4em;
 
-  h1{
+  h1 {
     padding-bottom: 2em;
   }
 }
@@ -16,7 +16,7 @@
   padding-bottom: 2em;
 }
 
-.unassigned{
+.unassigned {
   position: relative;
   top: 5em;
 }
@@ -28,12 +28,12 @@
 }
 
 .unassigned-body {
- position: relative;
- bottom: 1.1em;
+  position: relative;
+  bottom: 1.1em;
 
- th {
-   border: 0;
- }
+  th {
+    border: 0;
+  }
 }
 
 .assigned {
@@ -46,7 +46,6 @@
   bottom: 1.1em;
 }
 
-
 #assigned-heading {
   font-family: 'Noto Serif', serif;
   background-image: image-url('dark-wood.jpg');
@@ -55,8 +54,8 @@
 
 .update-room {
   font-family: 'Noto San', sans-serif;
-  border-radius: .1px;
-  color: #ffffff;
+  border-radius: 0.1px;
+  color: #fff;
   background: #222;
   text-decoration: none;
   border-radius: 8px;

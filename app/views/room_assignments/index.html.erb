@@ -27,26 +27,26 @@
         </table>
       </div>
     </div>
-  <div class="panel panel-default assigned">
-    <div class="panel-heading" id="assigned-heading">Assigned Guests</div>
-    <div class="panel-body assigned-body">
-      <table class="table">
-        <tr>
-          <th>Name</th>
-          <th>Reservation</th>
-          <th>Phone</th>
-          <th>Room</th>
-        </tr>
-        <% @assigned.each do |assignment| %>
-        <tr class="assignment">
-          <td><%= assignment.guest.name %></td>
-          <td><%= assignment.guest.reservation_number %></td>
-          <td><%= assignment.guest.phone_number %></td>
-          <td><%= assignment.room.room_number %></td>
-        </tr>
-        <% end %>
-      </table>
+    <div class="panel panel-default assigned">
+      <div class="panel-heading" id="assigned-heading">Assigned Guests</div>
+      <div class="panel-body assigned-body">
+        <table class="table">
+          <tr>
+            <th>Name</th>
+            <th>Reservation</th>
+            <th>Phone</th>
+            <th>Room</th>
+          </tr>
+          <% @assigned.each do |assignment| %>
+          <tr class="assignment">
+            <td><%= assignment.guest.name %></td>
+            <td><%= assignment.guest.reservation_number %></td>
+            <td><%= assignment.guest.phone_number %></td>
+            <td><%= assignment.room.room_number %></td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
     </div>
-  </div>
   </div>
 </div>
